@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body {
+            display: flex;
+            gap: 50px;
+            padding: 40px;
+        }
+
+        .card {
+            width: 150px;
+            height: 150px;
+            border: 1px solid black;
+            transition: 0.3s;
+        }
+
+        .card:nth-child(odd) {
+            background-color: green;
+        }
+
+        .card:nth-child(even) {
+            background-color: purple;
+        }
+
+        .card:hover {
+            transition: ease 0.3s;
+        }
+        
+        .card:nth-child(odd):hover {
+            transform: rotate(-20deg);
+        }
+
+        .card:nth-child(even):hover {
+            transform: rotate(20deg);
+        }
+
+        .card:first-child {
+            background-color: aqua;
+        }
+
+        .card:last-child {
+            background-color: orange;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="card"></div>
+    <div class="card"></div>
+    <div class="card"></div>
+    <div class="card"></div>
+</body>
+</html>
