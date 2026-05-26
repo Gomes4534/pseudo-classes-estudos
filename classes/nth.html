@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-
         body {
             display: flex;
             gap: 50px;
@@ -30,7 +30,7 @@
         .card:hover {
             transition: ease 0.3s;
         }
-        
+
         .card:nth-child(odd):hover {
             transform: rotate(-20deg);
         }
@@ -43,18 +43,42 @@
             background-color: aqua;
         }
 
-        .card:last-child {
-            background-color: orange;
+        /*Já esse código pega 3 quadrados e assim que o cursor passa em cima do 
+        elemento começa uma animação indo para a direita ou para a esquerda tudo 
+        depende da "transform: rotate"*/
+
+
+        /*ÚLTIMO CÓDIGO*/
+
+        @keyframes movimento {
+            0% {
+                transform: rotate(60deg);
+            }
+
+            100% {
+                transform: rotate(-60deg);
+            }
         }
 
 
+        .card:last-of-type {
+            background-color: orange;
+        }
+
+        .card:last-of-type:hover {
+            animation:  movimento 2.5s ease-in-out infinite alternate;
+        }
+
+        /*Esse ultimo código faz o último bloco ir pra um lado e voltar durante um tempo de 2.5 segundos*/
 
     </style>
 </head>
+
 <body>
     <div class="card"></div>
     <div class="card"></div>
     <div class="card"></div>
     <div class="card"></div>
 </body>
+
 </html>
